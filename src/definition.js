@@ -49,10 +49,10 @@ define( ["qlik"], function (qlik2) {
 				type: "string",
 				component: "dropdown",
 				change: function(data) {
-                    console.log(data);
+        	//console.log(data);
 					data.varvalue = data.varvalue || {};
-                	data.varvalue.qStringExpression = '=' + data.varname;
-                },
+          data.varvalue.qStringExpression = '=' + data.varname;
+        },
 				options: function() {
 					return qlik2.currApp(this).getList("VariableList", null).then(function(reply){
 						return reply.layout.qVariableList.qItems.map(function(item){
