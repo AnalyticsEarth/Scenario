@@ -4,10 +4,11 @@
   "type":"visualization",
   "version":"0.1.0",
   "author":"Steven Pressland",
-  "homepage":"",
+  "homepage":"https://github.com/AnalyticsEarth/Scenario",
+  "icon": "variables",
   "keywords":"qlik-sense, visualization",
-  "license":"",
-  "repository":"",
+  "license":"MIT",
+  "repository":"https://github.com/AnalyticsEarth/Scenario",
   "dependencies":
   {
     "qlik-sense":">=3.0.x"
