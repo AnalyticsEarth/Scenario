@@ -74,6 +74,24 @@ define( ["qlik"], function (qlik2) {
 				label: "Variable Default",
 				type: "string",
 				expression: "optional"
+			},
+			varshowuser:{
+				ref: "varshowuser",
+				label: "Show Users Previous Value",
+				type: "boolean",
+				defaultValue:true
+			},
+			varallowdef:{
+				ref: "varsallowdef",
+				label: "Allow Variable Single Update",
+				type: "boolean",
+				defaultValue:true
+			},
+			varshowdef:{
+				ref: "varshowdef",
+				label: "Show Default Value",
+				type: "boolean",
+				defaultValue:true
 			}
 		}
 	};

@@ -21,19 +21,32 @@ define( ["qlik", "text!./template.html","./definition","css!./aeScenarioStyle.cs
 
 				var app = qlik.currApp(this);
 
+				$scope.userval = {};
+
 				$scope.resetButton = function(){
 					$scope.layout.varlist.forEach(function(item){
 						//console.log("Reset");
 						//console.log(item);
-						$scope.setItem(item.varname, item.vardefault);
+						$scope.setItem(item, item.vardefault);
 
 					});
 				};
 
-				$scope.setItem = function(itemName, itemValue){
+				$scope.setItem = function(item, itemValue){
 					//console.log(itemName);
 					//console.log(itemValue);
-					app.variable.setStringValue(itemName,itemValue);
+					if(itemValue != item.vardefault){
+						//Store User value
+						$scope.userval[item.varname] = itemValue;
+					}
+					app.variable.setStringValue(item.varname,itemValue);
+				};
+
+				$scope.testEquals = function(left,right){
+					if(left == right) return false;
+					if (typeof right == 'undefined') return false;
+					if (typeof left == 'undefined') return false;
+					return true;
 				};
 
 		// 		$scope.addTooltip = function(){
