@@ -72,7 +72,8 @@ define( ["qlik"], function (qlik2) {
 			vardef:{
 				ref: "vardefault",
 				label: "Variable Default",
-				type: "string"
+				type: "string",
+				expression: "optional"
 			}
 		}
 	};

@@ -4,7 +4,7 @@
 			<label class="lui-label">{{variable.varlabel}}</label>
 			<div class="lui-input-group">
 				<input class="lui-input-group__item lui-input-group__input lui-input" ng-change="setItem(variable.varname, variable.varvalue)" ng-model="variable.varvalue" ng-model-options="{ updateOn: 'blur' }"/>
-				<button class="lui-input-group__item lui-input-group__button lui-button" ng-click="setItem(variable.varname, variable.vardefault)">
+				<button class="lui-input-group__item lui-input-group__button lui-button tooltip-trigger" ng-click="setItem(variable.varname, variable.vardefault)" aria-haspopup="true" title="This is the tooltip text to be displayed" ng-mouseover="addTooltip()">
     				<span class="lui-button__icon lui-icon lui-icon--back"></span>
   				</button>
 			</div>

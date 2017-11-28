@@ -2,7 +2,7 @@
   "name":"Scenario",
   "description":"Change variable values and reset them to a default state",
   "type":"visualization",
-  "version":"0.1.0",
+  "version":"0.1.1",
   "author":"Steven Pressland",
   "homepage":"https://github.com/AnalyticsEarth/Scenario",
   "icon": "variables",
