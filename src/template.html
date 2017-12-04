@@ -3,12 +3,12 @@
 		<div ng-repeat="variable in layout.varlist">
 			<label class="lui-label">{{variable.varlabel}}</label>
 			<div class="lui-input-group">
-				<button ng-if="variable.varshowuser && testEquals(userval[variable.varname],variable.varvalue)" class="lui-input-group__item lui-input-group__button lui-button tooltip-trigger varresetbutton" ng-click="setItem(variable, userval[variable.varname])" aria-haspopup="true" title="Reset to Last User Value: {{userval[variable.varname]}}">
+				<button ng-if="variable.varshowuser && testEquals(userval[variable.varname],variable.varvalue)" class="lui-input-group__item lui-input-group__button lui-button tooltip-trigger varresetbutton" ng-click="setItem(variable, userval[variable.varname])" aria-haspopup="true" title="Reset to Last User Value: {{userval[variable.varname]}}" lui-title-tooltip>
     				<span class="lui-button__icon lui-icon lui-icon--forward varreseticon"></span>
 						<span class="vardefpreview">{{userval[variable.varname]}}</span>
   			</button>
 				<input class="lui-input-group__item lui-input-group__input lui-input" ng-change="setItem(variable, variable.varvalue)" ng-model="variable.varvalue" ng-model-options="{ debounce: {default:2000, blur:0}, updateOn: 'default blur' }"/>
-				<button ng-if="variable.varsallowdef && (variable.vardefault != variable.varvalue)" class="lui-input-group__item lui-input-group__button lui-button tooltip-trigger varresetbutton" ng-click="setItem(variable, variable.vardefault)" aria-haspopup="true" title="Reset to Default: {{variable.vardefault}}">
+				<button ng-if="variable.varsallowdef && (variable.vardefault != variable.varvalue)" class="lui-input-group__item lui-input-group__button lui-button tooltip-trigger varresetbutton" ng-click="setItem(variable, variable.vardefault)" aria-haspopup="true" title="Reset to Default: {{variable.vardefault}}"  lui-title-tooltip>
     				<span class="lui-button__icon lui-icon lui-icon--back varreseticon"></span>
 						<span ng-if="variable.varshowdef" class="vardefpreview">{{variable.vardefault}}</span>
   			</button>
